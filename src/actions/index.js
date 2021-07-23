@@ -20,7 +20,7 @@ export const UPDATE_SUCCESS = "UPDATE_SUCCESS";
 
 export const ERROR = "ERROR";
 
-const baseURL = "https://bd-trip-split.herokuapp.com/api";
+const baseURL = "https://trip-splitter-v2.herokuapp.com/api";
 
 export const checkTime = () => {
   let currentTime = new Date().getTime();
