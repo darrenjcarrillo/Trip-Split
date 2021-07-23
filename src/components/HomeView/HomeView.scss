@@ -1,0 +1,110 @@
+@mixin mobile {
+  @media (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 800px) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (max-width: 1000px) {
+    @content;
+  }
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.main-container {
+  display: flex;
+
+  justify-content: center;
+  margin: 2rem;
+  // border: 1px solid black;
+
+  .trips-container {
+    border: 1px solid lightgrey;
+    // padding: 2rem;
+    border-radius: 20px;
+    background: white;
+    width: 25vw;
+    text-align: center;
+    box-shadow: -1px 15px 30px -12px black;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    // border: 1px solid black;
+
+    .content-details {
+      margin-top: 7rem;
+      // background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/barbarian-bg.jpg);
+
+      .destination {
+        color: black;
+        font-weight: 600;
+        font-size: 1.5rem;
+      }
+    }
+
+    @include tablet {
+      width: 35vw;
+    }
+    @include tablet {
+      width: 50vw;
+    }
+
+    @include mobile {
+      width: 65vw;
+    }
+  }
+
+  .button-card {
+    width: 12rem;
+  }
+
+  .button-card2 {
+    width: 12rem;
+    margin: 1rem 0rem 2rem;
+    background-color: #ffc53d;
+    border: none;
+    &:hover {
+      background-color: #ffd666;
+    }
+  }
+}
+
+.welcomeUser {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+  h2 {
+    color: #fff;
+  }
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 4%;
+  .addTrip {
+    width: 12rem;
+    height: 2rem;
+    border: none;
+  }
+  .add {
+    background-color: #73d13d;
+    border:none;
+    &:hover {
+      background-color: #95de64
+    }
+  }
+}
